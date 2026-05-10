@@ -1,0 +1,6 @@
+name: Arvinth S
+permalink: /blog/:title
+
+# seo tag
+plugins:
+  - jekyll-seo-tag
