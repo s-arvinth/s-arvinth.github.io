@@ -1,0 +1,66 @@
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
+%
+% Author:
+% Christophe Roger (Darwiin)
+% 
+% Modified by:
+% Sebastin Santy
+% This template has been downloaded from:
+% https://github.com/SebastinSanty/Just-Another-Research-CV
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+\documentclass[localFont,alternative]{yaac-another-awesome-cv}
+\usepackage[en-US]{datetime2}
+\vspace*{-1.26cm} % adjust value (e.g., -0.8cm to -2cm)
+\name{Arvinth}{Shanmugam}
+\tagline{Post-Baccalaureate Research Fellow, WSAI, IIT Madras }
+% \tagline{Post-Baccalaureate Research Fellow, Wadhwani School of Data Science and AI, IIT Madras }
+% \photo{2cm}{uwseal}
+
+\socialinfo{
+	\email{Email: bs20b008@smail.iitm.ac.in}
+    \website{https://s-arvinth.github.io}
+	\github{s-arvinth}
+	\scholar{https://scholar.google.com/citations?hl=en&user=HOILfMIAAAAJ&view_op=list_works&authuser=3&gmla=AKzYXQ3rDXt2zNsWz9tQ_xhUAYnG-5SjPf1pNYIfn904DqIyzFPtlWbjAhTIPzYgUmFjsPUYKvDSUTueUda5YYbi}
+    \linkedin{https://www.linkedin.com/in/arvinth-s/}
+	% \address{1023, Microsoft Research, \#9 VIGYAN, Lavelle Road, Bangalore, KA, India 560001}
+	\vspace{-3mm}
+
+}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb} % for dagger symbols
+\usepackage{fontawesome5}
+\renewcommand{\mailSymbol}{\scalebox{0.90}{\faEnvelope}}
+\usepackage{marvosym}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+
+\begin{document}
+	\makecvheader
+    \DTMlangsetup{showdayofmonth=false}
+
+    
+	\makecvfooter
+		{\textsc{\selectlanguage{english}\today}}
+		{\textsc{Arvinth S}}
+		{\thepage}
+
+    \input{sections/0_education}
+    \input{sections/1_experience}
+    \input{sections/2_publications}
+    \input{sections/3_projects}
+	\input{sections/talks}
+	\input{sections/awards}
+	% \input{sections/teaching}
+    \input{sections/POR}
+    \input{sections/skills}
+	% \input{sections/opensource}
+	% \input{sections/service}
+    % \input{sections/references} 
+
+% prevent any remaining \clearpage from forcing a blank float page
+\let\clearpage\relax
+\end{document}
