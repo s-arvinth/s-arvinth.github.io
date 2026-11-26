@@ -26,12 +26,10 @@
       @media (min-aspect-ratio: 113/100) and (max-aspect-ratio: 164/100) { .hero-full-container { background-image: url('/img/hero/hero-tabletL.jpg') !important; } }
       @media (min-aspect-ratio: 164/100) and (max-aspect-ratio: 187/100) { .hero-full-container { background-image: url('/img/hero/hero-laptop.jpg') !important; } }
       @media (min-aspect-ratio: 230/100) { .hero-full-container { background-image: url('/img/hero/hero-ultrawide.jpg') !important; } }
-      /* Typewriter line: smaller than "Hello, I am" so the long phrase fits; space reserved so nothing jumps */
-      .hero-full-container h1 { min-height: 4.6em; }
-      .hero-full-container #typed, .hero-full-container .typed-cursor { font-size: 0.8em; }
+      /* Typewriter line: same size as "Hello, I am"; space reserved so nothing jumps while typing */
+      .hero-full-container h1 { min-height: 4.5em; }
       @media (max-width: 767px) {
-        .hero-full-container h1 { font-size: 44px; min-height: 6.2em; }
-        .hero-full-container #typed, .hero-full-container .typed-cursor { font-size: 0.72em; }
+        .hero-full-container h1 { font-size: 40px; min-height: 7.8em; }
       }
     </style>
     {% if site.google_analytics and jekyll.environment == 'production' %}
@@ -89,7 +87,7 @@
     </script>
 
 
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js?v=2"></script>
 </body>
 
 </html>

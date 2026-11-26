@@ -439,8 +439,13 @@
                 new s.a("#typed", {
                     stringsElement: "#typed-strings",
                     typeSpeed: 100,
-                    backSpeed: 20,
+                    backSpeed: 8,
                     loop: !0,
+                    // long phrases type faster (about 3 s) so the typewriter feel stays without the wait
+                    preStringTyped: function (pos, self) {
+                        var str = self.strings[self.sequence[pos]] || "";
+                        self.typeSpeed = str.length > 30 ? 30 : 100;
+                    },
                     loopCount: 1 / 0
                 })
             }
