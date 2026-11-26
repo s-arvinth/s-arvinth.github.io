@@ -18,13 +18,20 @@
 
     <link href="/css/default.css" rel="stylesheet" type="text/css">
     <style>
-      .hero-tagline { font-size: 26px; font-weight: 500; line-height: 1.35; max-width: 640px; margin: 0 0 8px; }
+      /* Homepage photo: one crop per screen shape (chosen in hero_crop_tool.html).
+         Photo area = full width x 90% of window height; thresholds are window width/height. */
+      .hero-full-container { background-position: center center !important; }
+      @media (max-aspect-ratio: 62/100) { .hero-full-container { background-image: url('/img/hero/hero-phone.jpg') !important; } }
+      @media (min-aspect-ratio: 62/100) and (max-aspect-ratio: 113/100) { .hero-full-container { background-image: url('/img/hero/hero-tabletP.jpg') !important; } }
+      @media (min-aspect-ratio: 113/100) and (max-aspect-ratio: 164/100) { .hero-full-container { background-image: url('/img/hero/hero-tabletL.jpg') !important; } }
+      @media (min-aspect-ratio: 164/100) and (max-aspect-ratio: 187/100) { .hero-full-container { background-image: url('/img/hero/hero-laptop.jpg') !important; } }
+      @media (min-aspect-ratio: 230/100) { .hero-full-container { background-image: url('/img/hero/hero-ultrawide.jpg') !important; } }
+      /* Typewriter line: smaller than "Hello, I am" so the long phrase fits; space reserved so nothing jumps */
+      .hero-full-container h1 { min-height: 4.6em; }
+      .hero-full-container #typed, .hero-full-container .typed-cursor { font-size: 0.8em; }
       @media (max-width: 767px) {
-        .hero-tagline { font-size: 16px; max-width: calc(100vw - 40px); overflow-wrap: break-word; }
-        .hero-full-container {
-          background-image: url('/img/home-mobile-new.jpg') !important;
-          background-position: 70% top !important;
-        }
+        .hero-full-container h1 { font-size: 44px; min-height: 6.2em; }
+        .hero-full-container #typed, .hero-full-container .typed-cursor { font-size: 0.72em; }
       }
     </style>
     {% if site.google_analytics and jekyll.environment == 'production' %}
