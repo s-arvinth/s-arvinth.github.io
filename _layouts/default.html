@@ -17,6 +17,9 @@
     <title>{{page.title}}</title>
 
     <link href="/css/default.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
       /* Homepage photo: one crop per screen shape (chosen in hero_crop_tool.html).
          Photo area = full width x 90% of window height; thresholds are window width/height. */
@@ -26,6 +29,13 @@
       @media (min-aspect-ratio: 113/100) and (max-aspect-ratio: 164/100) { .hero-full-container { background-image: url('/img/hero/hero-tabletL.jpg') !important; } }
       @media (min-aspect-ratio: 164/100) and (max-aspect-ratio: 187/100) { .hero-full-container { background-image: url('/img/hero/hero-laptop.jpg') !important; } }
       @media (min-aspect-ratio: 230/100) { .hero-full-container { background-image: url('/img/hero/hero-ultrawide.jpg') !important; } }
+      /* Homepage body text (below the photo) in Lato; the "Hello, I am" heading keeps Roboto */
+      .home-content, .home-content p, .home-content li, .home-content a, .home-content h2 {
+        font-family: Lato, "Helvetica Neue", Arial, sans-serif !important;
+        letter-spacing: normal;
+      }
+      .home-content p, .home-content li { font-size: 16px; font-weight: 400; line-height: 1.6; }
+      .home-content .template-title-example { font-weight: 700; }
       /* Typewriter line: same size as "Hello, I am"; space reserved so nothing jumps while typing */
       .hero-full-container h1 { min-height: 4.5em; }
       @media (max-width: 767px) {
